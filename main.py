@@ -11,8 +11,8 @@ Example:
     add_numbers(-1, 4) -> 3
 """
 def add_numbers(a, b):
-    pass
-
+    a + b
+    return a + b
 
 # Exercise 2: Subtract Numbers
 """
@@ -23,7 +23,9 @@ Example:
     subtract_numbers(3, 5) -> -2
 """
 def subtract_numbers(a, b):
-    pass
+    a - b
+    return a - b
+    
 
 
 # Exercise 3: FruitLoop
@@ -42,7 +44,15 @@ Example:
     Loop
 """
 def fruitloop(n):
-    pass
+    if n % 3 == 0 and n % 5 == 0:
+        print("FruitLoop")
+    elif n % 3 == 0:
+        print("Fruit")
+    elif n % 5 == 0:
+        print("Loop")
+    else:
+        return n
+    
 
 
 # Exercise 4: Fibonacci
@@ -56,6 +66,8 @@ Example:
 def fibonacci(n: int):
     pass
 
+    
+
 
 # Exercise 5: Find Maximum
 """
@@ -66,7 +78,7 @@ Example:
     find_max([-1,-5,-3]) -> -1
 """
 def find_max(numbers: list):
-    pass
+    return max(numbers)
 
 
 # Exercise 6: Find Minimum
@@ -78,8 +90,7 @@ Example:
     find_min([-1,-5,-3]) -> -5
 """
 def find_min(numbers: list):
-    pass
-
+    return min(numbers)
 
 # Exercise 7: Person Class
 """
@@ -98,19 +109,18 @@ Example:
 """
 class Person:
     def __init__(self, name: str, age: int):
-        pass
+        self.name = name
+        self.age = age
 
     def greet(self):
-        pass
-
-
-
-
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+    
+    #p = Person("Alice", 25)
 
 # Example usage (can be removed or commented out during testing)
 # This part is just for demonstration and won't be executed during tests.
 # Remove docstrings to see how the functions and class work.
-"""
+
 if __name__ == "__main__":
     # Example usage (can be removed or commented out during testing)
     print(add_numbers(2, 3))  # Should print 5
@@ -121,4 +131,4 @@ if __name__ == "__main__":
     print(find_min([1, 2, 3, 4, 5]))  # Should print 1
     p = Person("Alice", 25)
     print(p.greet())  # Should print greeting message
-"""
+
